@@ -1,0 +1,10 @@
+Package: BCI
+Type: Package
+Title: Get bootstrapped confidence intervals
+Version: 1.0
+Date: 2015-10-28
+Author: Julian Jara-Ettinger
+Maintainer: Julian Jara-Ettinger <jjara@mit.edu>
+Description: Simple package that gets confidence intervals using the boot package in a way that let's you interface with dplyr and plyr more efficiently.
+License: MIT
+Imports: boot
