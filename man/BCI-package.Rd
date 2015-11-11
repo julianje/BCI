@@ -10,10 +10,9 @@
 }
 \details{
 
-The DESCRIPTION file:
 \packageDESCRIPTION{BCI}
 \packageIndices{BCI}
-~~ An overview of how to use the package, including the most important functions ~~
+BCI let's you get a vector's confidence intervals through CI(), a lower bound with LowerCI(), and an upper bound with TopCI().
 }
 \author{
 \packageAuthor{BCI}
@@ -21,15 +20,13 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{BCI}
 }
 \references{
-~~ Literature or other references for background information ~~
-}
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation ~~
-~~ directory ~~
-\keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[boot:boot-package]{boot}} ~~
+see boot documentation.
 }
 \examples{
-~~ simple examples of the most important functions ~~
+library(datasets)
+library(dplyr)
+airquality \%>\% group_by(Month) \%>\%
+summarise(MeanWind=mean(Wind),
+	      LowerBound=LowerCI(Wind),
+	      UpperBound=TopCI(Wind))
 }
